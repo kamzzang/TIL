@@ -24,4 +24,8 @@
 * git reset --hard commit-ID
 * git reset --soft commit-ID 
 
-### Revert
+### Display log(branch)
+* git log --all --grape -- oneline
+
+### Correct coCcommit massage
+* git commit --amend
