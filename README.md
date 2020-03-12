@@ -28,4 +28,13 @@
 * git log --all --grape -- oneline
 
 ### Correct coCcommit massage
-* git commit --amend
+* git commit --amend  
+
+## 2020.03.12
+### Git remote
+* git init
+* git remote add origin "http adress"
+* git pull origin master
+* git add *
+* git commit -m "Message"
+* git push --set-upstream origin master
