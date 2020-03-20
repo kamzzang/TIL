@@ -30,6 +30,7 @@
 ### Correct coCcommit massage
 * git commit --amend  
 
+
 ## 2020.03.12
 ### Git remote
 * git init
@@ -38,3 +39,13 @@
 * git add *
 * git commit -m "Message"
 * git push --set-upstream origin master
+
+
+## 2020.03.20
+### pyc compile(pyc_compile.py)  
+import py_compile  
+py_compile.compile('py file name')
+
+### bat file(2 python versions)  
+C:\Anaconda3\python.exe pyc_compile.py  
+C:\Anaconda3\envs\python36\python.exe pyc_compile.py
