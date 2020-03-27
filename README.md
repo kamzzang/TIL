@@ -95,3 +95,16 @@ df = pd.DataFrame.from_records([{'col_1':1, 'col_2':2}])
 df = pd.DataFrame.from_doct([{'col_1':1, 'col_2':2}])
 </code>
 </pre>
+
+
+## 2020.03.27
+### 동적 변수 생성
+<pre>
+<code>
+data = ["first", "second", "third"]
+for name in data:
+    for i in range(1,4):
+        globals()[name] = [x*i for x in range(3)]
+</code>
+</pre>
+변수
