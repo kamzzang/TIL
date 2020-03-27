@@ -107,4 +107,3 @@ for name in data:
         globals()[name] = [x*i for x in range(3)]
 </code>
 </pre>
-변수
