@@ -132,3 +132,12 @@ with open('?????.json', 'r') as f:
 print(admin_info)
 </code>
 </pre>
+
+### 환경변수 불러오기
+<pre>
+<code>
+import os
+
+admin_info_file = os.getenv('NAME')
+</code>
+</pre>
