@@ -119,3 +119,16 @@ with open('?????.json', 'w', encoding='utf-8') as make_file:
     json.dump(json_data, make_file, indent="\t")
 </code>
 </pre>
+
+### json 파일 open
+<pre>
+<code>
+import json
+
+with open('?????.json', 'r') as f:
+
+    admin_info = json.load(f)
+
+print(admin_info)
+</code>
+</pre>
