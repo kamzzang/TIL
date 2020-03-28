@@ -107,3 +107,15 @@ for name in data:
         globals()[name] = [x*i for x in range(3)]
 </code>
 </pre>
+
+## 2020.03.28
+### json 파일 생성
+<pre>
+<code>
+import json
+
+with open('?????.json', 'w', encoding='utf-8') as make_file:
+
+    json.dump(json_data, make_file, indent="\t")
+</code>
+</pre>
