@@ -141,3 +141,19 @@ import os
 admin_info_file = os.getenv('NAME')
 </code>
 </pre>
+
+
+## 2020.04.02
+### Numpy Zero-like
+<pre>
+<code>
+>>> x = np.arange(6)
+>>> x = x.reshape((2, 3))
+>>> x
+array([[0, 1, 2],
+       [3, 4, 5]])
+>>> np.zeros_like(x)
+array([[0, 0, 0],
+       [0, 0, 0]])
+</code>
+</pre>
