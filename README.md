@@ -157,3 +157,7 @@ array([[0, 0, 0],
        [0, 0, 0]])
 </code>
 </pre>
+
+## 2020.04.12
+### Folium Marker icon ref.
+ * https://getbootstrap.com/docs/3.3/components/#glyphicons-glyph
