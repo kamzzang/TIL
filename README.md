@@ -174,3 +174,6 @@ ssh -i "AWSKEY.pem" ubuntu@ec2-IP주소.ap-northeast-2.compute.amazonaws.com
 ### 중지
 1. netstat -nap | grep {포트 번호}: 특정 포트 번호에서 돌아가는 프로세스를 확인하기
 2. kill -9 {프로세스 번호}: 특정한 프로세스를 종료시키기
+### 추가
+1. jobs : 프로세스 확인
+2. fg : 포어그라운드
