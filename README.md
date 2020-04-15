@@ -172,5 +172,5 @@ ssh -i "AWSKEY.pem" ubuntu@ec2-IP주소.ap-northeast-2.compute.amazonaws.com
 3. bg : 백그라운드에서 서버 다시 구동
 4. disown -h : 소유권 포기
 ### 중지
-1. stat -nap | grep {포트 번호}: 특정 포트 번호에서 돌아가는 프로세스를 확인하기
+1. netstat -nap | grep {포트 번호}: 특정 포트 번호에서 돌아가는 프로세스를 확인하기
 2. kill -9 {프로세스 번호}: 특정한 프로세스를 종료시키기
