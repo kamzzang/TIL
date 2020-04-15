@@ -161,3 +161,16 @@ array([[0, 0, 0],
 ## 2020.04.12
 ### Folium Marker icon ref.
  * https://getbootstrap.com/docs/3.3/components/#glyphicons-glyph
+
+## 2020.04.15
+### AWS SSH 연결
+cmd / powershell 관리자모드로 실행  
+ssh -i "AWSKEY.pem" ubuntu@ec2-IP주소.ap-northeast-2.compute.amazonaws.com  
+### AWS server 구동
+1. python3 application.py : 파이썬 서버 구동
+2. Ctrl + Z : 프로세스 중지
+3. bg : 백그라운드에서 서버 다시 구동
+4. disown -h : 소유권 포기
+### 중지
+1. stat -nap | grep {포트 번호}: 특정 포트 번호에서 돌아가는 프로세스를 확인하기
+2. kill -9 {프로세스 번호}: 특정한 프로세스를 종료시키기
