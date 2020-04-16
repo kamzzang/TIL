@@ -177,3 +177,21 @@ ssh -i "AWSKEY.pem" ubuntu@ec2-IP주소.ap-northeast-2.compute.amazonaws.com
 ### 추가
 1. jobs : 프로세스 확인
 2. fg : 포어그라운드
+
+
+## 2020.04.16
+### KAKAO MAPS API
+* Geocoding
+<pre>
+<code>
+url = 'https://dapi.kakao.com/v2/local/search/address.json?query='+addr
+headers = {"Authorization": "KakaoAK {Private Key}"}
+result = json.loads(str(requests.get(url,headers=headers).text))
+
+if len(result['documents']) !=0:
+    match_first = result['documents'][0]['address']
+    return float(match_first['y']),float(match_first['x'])
+else:
+    return None, None
+</code>
+</pre>
