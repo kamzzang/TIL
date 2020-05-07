@@ -195,3 +195,9 @@ else:
     return None, None
 </code>
 </pre>
+
+
+## 2020.05.07
+### install python anaconda 32bit envs
+* set CONDA_FORCE_32BIT=1
+* conda create -n XXXXXXX python=3.7 anaconda
