@@ -201,3 +201,8 @@ else:
 ### install python anaconda 32bit envs
 * set CONDA_FORCE_32BIT=1
 * conda create -n XXXXXXX python=3.7 anaconda
+
+### To activate envs.
+* conda activate XXXXXXX
+### To deactivate an active envs.
+* conda deactivate
