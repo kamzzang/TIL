@@ -206,18 +206,3 @@ else:
 * conda activate XXXXXXX
 ### To deactivate an active envs.
 * conda deactivate
-
-
-## 2020.05.08
-### python slacker
-<pre>
-<code>
-
-from slacker import Slacker
-
-token = 'Slack API Token'
-slack = Slacker(token)
-slack.chat.post_message('#general', 'Bot test message')
-
-</code>
-</pre>
