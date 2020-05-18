@@ -206,3 +206,55 @@ else:
 * conda activate XXXXXXX
 ### To deactivate an active envs.
 * conda deactivate
+
+
+## 2020.05.18
+### pandas string
+<pre>
+<code>
+# 공백 제거
+df['email_strip']  = df['email'].str.strip()  # 앞 뒤 공백을 제거
+df['email_lstrip'] = df['email'].str.lstrip() # 앞 공백을 제거
+df['email_rstrip'] = df['email'].str.rstrip() # 뒤 공백을 제거
+
+# split(): 구분자를 기준으로 n개로 나눈다, expand=True이면 여러 컬럼, False이면 1개 컬럼에 리스트
+df[['email_split_1', 'email_split_2']] = df['email'].str.split('@', n=1, expand=True)
+
+# 치환
+df['email_lower']      = df['email'].str.lower()      # 모두 소문자로 변경
+df['email_upper']      = df['email'].str.upper()      # 모두 대문자로 변경
+df['email_capitalize'] = df['email'].str.capitalize() # 앞문자 대문자로 변경
+df['email_title']      = df['email'].str.title()      # 단위별 앞문자 대문자로 변경
+df['email_swapcase']   = df['email'].str.swapcase()   # 소문자는 대문자, 대문자는 소문자로 변경 
+
+# 입력 패턴 또는 글자를 대체, 예제에서는 .을 _로 변경
+df['email_replace']    = df['email'].str.replace(pat='.', repl='_', regex=False)
+
+# 문자열의 위치(인덱스)
+df['email_find']    = df['email'].str.find(sub='.')           # 왼쪽부터 sub값 검색후 위치반환
+df['email_findall'] = df['email'].str.findall(pat='[a-zA-Z]') # 찾은 모든 값 반환
+df['email_rfind']   = df['email'].str.rfind(sub='.')          # 오른쪽부터 sub값 검색후 위치반환
+df['email_index']   = df['email'].str.index(sub='.')          # 왼쪽부터 sub값 검색후 위치반환
+df['email_rindex']  = df['email'].str.rindex(sub='.')         # 오른쪽부터 sub값 검색후 위치반환
+
+# 길이 반환
+df['email_len']   = df['email'].str.len()              
+
+# 구성 확인
+df['email_isalnum']   = df['email'].str.isalnum()   # 알파벳 또는 숫자로만 구성 여부
+df['email_isalpha']   = df['email'].str.isalpha()   # 알파벳으로만 구성 여부
+df['email_isdecimal'] = df['email'].str.isdecimal() # 숫자문자로만 구성 여부
+df['email_isdigit']   = df['email'].str.isdigit()   # 숫자문자로만 구성 여부
+df['email_islower']   = df['email'].str.islower()   # 소문자로만 구성 여부
+df['email_isnumeric'] = df['email'].str.isnumeric() # 숫자문자로만 구성 여부
+df['email_isspace']   = df['email'].str.isspace()   # 공백(Whitespace)으로만 구성 여부
+df['email_istitle']   = df['email'].str.istitle()   # TitleCase형태로 구성 여부
+df['email_isupper']   = df['email'].str.isupper()   # 대문자로만 구성 여부
+
+# 문자열 패턴
+df['email_startswith'] = df['email'].str.startswith(pat='h')     # 좌측값이 입력패턴과 일치 여부
+df['email_endswith']   = df['email'].str.endswith(pat='com')     # 우측값이 입력패턴과 일치 여부
+df['email_contains']   = df['email'].str.contains(pat='kr', regex=False) # 값 중 패턴포함 여부
+df['email_match']      = df['email'].str.match(pat='[a-zA-Z@.]') # 입력패턴과 일치 여부
+</code>
+</pre>
