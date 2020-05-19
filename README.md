@@ -258,3 +258,33 @@ df['email_contains']   = df['email'].str.contains(pat='kr', regex=False) # 값 �
 df['email_match']      = df['email'].str.match(pat='[a-zA-Z@.]') # 입력패턴과 일치 여부
 </code>
 </pre>
+
+
+## 2020.05.19
+### OS Module
+<pre>
+<code>
+# 파일 목록 얻기
+glob.glob(wildcard) # 유닉스 경로명 패턴 스타일로 파일 목록을 얻을 수 있다.
+os.listdir(path) # 지정된 디렉토리의 전체 파일 목록을 얻을 수 있다.
+dircache.listdir(path) # os.listdir(path)와 동일한 파일 목록을 전달한다.
+
+# 디렉토리 다루기
+os.chdir(path) #작업하고 있는 디렉토리 변경
+os.getcwd() # 현재 프로세스의 작업 디렉토리 얻기
+
+# 파일 이름 다루기
+os.path.abspath(filename) # 파일의 상대 경로를 절대 경로로 바꾸는 함수
+os.path.exists(filename) # 주어진 경로의 파일이 있는지 확인하는 함수
+os.curdir() # 현재 디렉토리 얻기
+os.pardir() # 부모 디렉토리 얻기
+os.sep() # 디렉토리 분리 문자 얻기
+
+# 경로명 분리하기
+os.path.basename(filename) # 파일명만 추출
+os.path.dirname(filename) # 디렉토리 경로 추출
+os.path.split(filename) # 경로와 파일명을 분리
+os.path.splitdrive(filename) # 드라이브명과 나머지 분리 (MS Windows의 경우)
+os.path.splitext(filename) # 확장자와 나머지 분리
+</code>
+</pre>
