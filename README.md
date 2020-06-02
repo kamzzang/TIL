@@ -309,3 +309,23 @@ nowDatetime = now.strftime('%Y-%m-%d %H:%M:%S')
 print(nowDatetime)  # 2018-07-28 12:11:32
 </code>
 </pre>
+
+
+## 2020.06.02
+### Class member variable
+<pre>
+<code>
+A. dir
+class Obj:
+    def __init__(self):
+        self.x = 9
+obj=Obj()
+print( dir(obj) )
+>>> ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'x']
+
+B. __dict__
+print(obj.__dict__)
+>>> {'x': 9}
+
+</code>
+</pre>
