@@ -329,3 +329,17 @@ print(obj.__dict__)
 
 </code>
 </pre>
+
+### 변수 존재 확인
+1. Try / Exception
+try : 
+     thevariable
+  exception NameError :
+     print('The variablle wasn't defined'_
+  else :
+     print('It is defined') 
+     
+2. variable
+if 'myVar' in locals(): # local variable 일 경우
+if 'myVar' in globals(): # global variable 일 경우
+if  hasattr(obj,'attr_name') : # obj name이 존재할 경우
