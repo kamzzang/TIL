@@ -343,3 +343,24 @@ try :
 if 'myVar' in locals(): # local variable 일 경우
 if 'myVar' in globals(): # global variable 일 경우
 if  hasattr(obj,'attr_name') : # obj name이 존재할 경우
+
+
+## 2020.06.08
+### AWS EC2 ubuntu 유저 생성(pem 파일없이 패스워드 사용 접속)
+sudo useradd -s /bin/bash -m -d /home/mckam -g root USERNAME
+
+sudo passwd USERNAME
+PASSWORD
+
+sudo chmod u+w /etc/sudoers
+
+sudo nano /etc/sudoers
+USERNAME ALL=(ALL:ALL) ALL
+
+sudo nano /etc/ssh/sshd_config
+PasswordAuthentication yes
+
+sudo service ssh restart
+
+ssh USERNAME@IP ADRESS
+PASSWORD
