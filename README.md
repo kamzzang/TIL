@@ -332,18 +332,24 @@ print(obj.__dict__)
 
 ### 변수 존재 확인
 1. Try / Exception
+<pre>
+<code>
 try : 
      thevariable
-  exception NameError :
+exception NameError :
      print('The variablle wasn't defined'_
-  else :
+else :
      print('It is defined') 
-     
+</code>
+</pre>     
 2. variable
+<pre>
+<code>
 if 'myVar' in locals(): # local variable 일 경우
 if 'myVar' in globals(): # global variable 일 경우
 if  hasattr(obj,'attr_name') : # obj name이 존재할 경우
-
+</code>
+</pre>    
 
 ## 2020.06.08
 ### AWS EC2 ubuntu 유저 생성(pem 파일없이 패스워드 사용 접속)
