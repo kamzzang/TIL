@@ -370,3 +370,18 @@ sudo service ssh restart
 
 ssh USERNAME@IP ADRESS
 PASSWORD
+
+
+## 2020.06.23
+### Pandas DataFrame 중복제거
+<pre>
+<code>
+df.drop_duplicates([A, B], keep='first') # A, B : 중복 여부 기준 Columns
+</code>
+</pre> 
+### Pandas DataFrame index 초기화
+<pre>
+<code>
+df.reset_index(drop=True)
+</code>
+</pre> 
