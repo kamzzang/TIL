@@ -385,3 +385,18 @@ df.drop_duplicates([A, B], keep='first') # A, B : 중복 여부 기준 Columns
 df.reset_index(drop=True)
 </code>
 </pre> 
+
+
+## 2020.06.27
+### 리스트형 내에서의 임의의 외부 숫자 위치 확인
+<pre>
+<code>
+A = [1,4,6,7]
+num = 5
+
+A.append(num)
+A.sort()
+pos = A.index(num)
+A.remove(num)
+</code>
+</pre>
