@@ -400,3 +400,14 @@ pos = A.index(num)
 A.remove(num)
 </code>
 </pre>
+
+
+## 2020.06.29
+### 파일 실행
+<pre>
+<code>
+import os
+
+os.startfile(filename)
+</code>
+</pre>
