@@ -411,3 +411,12 @@ import os
 os.startfile(filename)
 </code>
 </pre>
+
+
+## 2020.07.13
+### 구글스프레드시트 주식 데이터 받기
+### GOOGLEFINANCE
+* KOSPI 지수 10일 데이터 =GOOGLEFINANCE("KRX:KOSPI", "price", Today()-10, Today(), "DAILY")  
+* KOSDQ 지수 20일 데이터 =GOOGLEFINANCE("KOSDAQ:KOSDAQ", "price", Today()-20, Today(), "DAILY")  
+* KOSPI 종목 현재가 =GOOGLEFINANCE("KRX:035720")  
+* KOSDAQ 종목 현재가 =GOOGLEFINANCE("KOSDAQ:258790")
