@@ -426,3 +426,8 @@ os.startfile(filename)
 ### SQLite3 데이터 중복 제거
 * "DELETE FROM ??? WHERE rowid NOT IN  (SELECT Max(rowid) FROM ??? GROUP BY TITLE order by TITLE)"
 * "DELETE FROM Holiday WHERE rowid NOT IN  (SELECT Max(rowid) FROM Holiday GROUP BY Holiday order by Holiday)"
+
+
+## 2020.07.15
+### SQLite3 DataFrame 저장
+* df.to_sql('table', conn, if_exists='replace', index=False)
