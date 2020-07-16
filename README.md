@@ -431,3 +431,14 @@ os.startfile(filename)
 ## 2020.07.15
 ### SQLite3 DataFrame 저장
 * df.to_sql('table', conn, if_exists='replace', index=False)
+
+
+## 2020.07.16
+### SQLite3 query
+<pre>
+<code>
+select 시장구분, 종목코드, 종목명, 주식수, 전일종가, 전일종가*주식수 as 시가총액  
+            from 종목코드    
+            order by 시장구분, 종목코드  
+</code>
+</pre>
