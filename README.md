@@ -442,3 +442,8 @@ select 시장구분, 종목코드, 종목명, 주식수, 전일종가, 전일종
             order by 시장구분, 종목코드  
 </code>
 </pre>
+
+
+## 2020.07.20
+### 크롤링 requests SSLError 해결
+* requests.get(url, verify=False)
