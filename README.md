@@ -420,7 +420,9 @@ os.startfile(filename)
 * KOSDQ 지수 20일 데이터 =GOOGLEFINANCE("KOSDAQ:KOSDAQ", "price", Today()-20, Today(), "DAILY")  
 * KOSPI 종목 현재가 =GOOGLEFINANCE("KRX:035720")  
 * KOSDAQ 종목 현재가 =GOOGLEFINANCE("KOSDAQ:258790")
-
+* NASDAQ 종목 현재가 =GOOGLEFINANCE("NASDAQ:SBUX")
+* NYSE 종목 현재가 =GOOGLEFINANCE("NYSE:DIS")
+ 
 
 ## 2020.07.14
 ### SQLite3 데이터 중복 제거
