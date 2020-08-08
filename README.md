@@ -459,3 +459,9 @@ df.sort_values(by="A", ascending=False)
 df.sort_values(['rank', 'rank1', 'rank2'], ascending=[True,True,True])
 </code>
 </pre> 
+### Pandas Rank
+<pre>
+<code>
+df['rank1'] = df['A'].rank(ascending=False)
+</code>
+</pre> 
