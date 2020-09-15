@@ -465,3 +465,14 @@ df.sort_values(['rank', 'rank1', 'rank2'], ascending=[True,True,True])
 df['rank1'] = df['A'].rank(ascending=False)
 </code>
 </pre> 
+
+
+## 2020.09.15
+### Pandas String to DateTime
+<pre>
+<code>
+df['col'] = pd.to_datetime(df['col'])
+pd.to_datetime(pd.Series(['05/23/2005']))
+pd.to_datetime(pd.Series(['05/23/2005']), format="%m/%d/%Y")
+</code>
+</pre> 
