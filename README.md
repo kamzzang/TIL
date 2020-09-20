@@ -455,7 +455,7 @@ select 시장구분, 종목코드, 종목명, 주식수, 전일종가, 전일종
 ### Pandas Sorting
 <pre>
 <code>
-df.sort_values(by="A", ascending=False)
+df.sort_values(by="A", ascending=False) # ascending=False : 내림차순
 df.sort_values(['rank', 'rank1', 'rank2'], ascending=[True,True,True])
 </code>
 </pre> 
