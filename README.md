@@ -476,3 +476,17 @@ pd.to_datetime(pd.Series(['05/23/2005']))
 pd.to_datetime(pd.Series(['05/23/2005']), format="%m/%d/%Y")
 </code>
 </pre> 
+
+
+## 2020.09.25
+### SQLite3 query
+<pre>
+<code>
+query = """
+    SELECT A.날짜, A.기간구분, A.종목코드, C.종목명, B.종가, A.매출액, A.영업이익, A.당기순이익, A.자산총계, A.부채총계, A.자본총계, A.자본금, 
+        A.부채비율, A.유보율, A.영업이익률, A.순이익률, A.ROA, A.ROE, A.EPS, A.BPS, A.DPS, A.PER, 1/A.PER as RPER, A.PBR, A.발행주식수, A.배당수익률, C.종목상태
+    FROM 재무정보 A, (select 종목코드, 종가 from 일별주가 where 일자 = (select max(일자) from 일별주가 where 일자 <= '%s')) B, 종목코드_주식 C
+    WHERE 날짜='%s' and 기간구분='%s' and A.종목코드=B.종목코드 and A.종목코드=C.종목코드
+    """ % (날짜, 날짜, 기간구분)
+</code>
+</pre>
