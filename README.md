@@ -490,3 +490,18 @@ query = """
     """ % (날짜, 날짜, 기간구분)
 </code>
 </pre>
+
+
+## 2020.09.30
+### R
+<pre>
+<code>
+library(boot)
+data(nodal)
+data(nodal)
+a<-c(2,4,6,7)
+data <- nodal[,a]
+glmModel <- glm(r~., data=data, family = "binomial")
+summary(glmModel)
+</code>
+</pre> 
