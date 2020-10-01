@@ -505,3 +505,10 @@ glmModel <- glm(r~., data=data, family = "binomial")
 summary(glmModel)
 </code>
 </pre> 
+<pre>
+<code>
+Moving Averages
+Calculate various moving averages (MA) of a series.
+SMA(x, n = 10, ...)
+</code>
+</pre> 
