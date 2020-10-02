@@ -512,3 +512,12 @@ Calculate various moving averages (MA) of a series.
 SMA(x, n = 10, ...)
 </code>
 </pre> 
+<pre>
+<code>
+주성분분석 PCA(Principal Component Analysis)
+college_s <- scale(college)
+summary(college_s
+fit <- princomp(college_s)
+fit$loadings
+</code>
+</pre> 
