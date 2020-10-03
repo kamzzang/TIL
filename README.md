@@ -521,3 +521,11 @@ fit <- princomp(college_s)
 fit$loadings
 </code>
 </pre> 
+<pre>
+<code>
+# 최적회귀_변수선택법
+step(lm(출력변수~입력변수, 데이터세트), scope=list(lower=~1, upper=~입력변수), direction="변수선택방법")
+# 예제
+step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forward")
+</code>
+</pre> 
