@@ -529,3 +529,16 @@ step(lm(출력변수~입력변수, 데이터세트), scope=list(lower=~1, upper=
 step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forward")
 </code>
 </pre> 
+
+
+## 2020.10.05
+### R
+<pre>
+<code>
+# 연관성 분석 apriori(arules 패키지)
+> data(Groceries)
+> inspect(Groceries[1:3])
+> rules <- apriori(Froceries, parameter=list(support=0.01, confidence=0.3))
+> inspect(sort(rules, by=c("lift"), decreasing=TRUE)[1:20])
+</code>
+</pre>
