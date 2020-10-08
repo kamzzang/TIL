@@ -542,3 +542,14 @@ step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forw
 > inspect(sort(rules, by=c("lift"), decreasing=TRUE)[1:20])
 </code>
 </pre>
+<pre>
+<code>
+# 군집분석(k-means)
+> data(iris)
+> newiris <- iris
+> newiris$Species <- NULL
+> kc <- kmeans(newiris, 3)
+> table(iris$Species, kc$cluster)
+> plot(newiris[c("Sepal.Length", "Sepal.Width")], col=kc$cluster)
+</code>
+</pre>
