@@ -574,3 +574,15 @@ step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forw
 > sqldf("select * from [data frame] where [col] like 'char%' ")
 </code>
 </pre>
+
+## 2020.10.10
+### R
+<pre>
+<code>
+# 데이터프레임 조회 
+# 1. data.frame에서 바로 조회
+> test[test$학과=='경영학과',]
+# 2. subset으로 데이터셋 조회
+> subset(test, subset=(학과=="경영학과"))
+</code>
+</pre>
