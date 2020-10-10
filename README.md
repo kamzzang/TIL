@@ -566,3 +566,11 @@ step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forw
 > a <- cast(aqm, day~month~variable)
 </code>
 </pre>
+<pre>
+<code>
+# sqldf
+> sqldf("select * from [data frame]")
+> sqldf("select * from [data frame] limit 10")
+> sqldf("select * from [data frame] where [col] like 'char%' ")
+</code>
+</pre>
