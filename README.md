@@ -596,5 +596,9 @@ step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forw
 > rep(1,time=5)
 > rep(1:4, each=2)
 > rep(c, each=2
+# 문자 붙이기
+> A <- paste("a", "b", "c", sep="-")
+> paste(A, c("e", "f"))
+> paste(A, 10, sep="")
 </code>
 </pre>
