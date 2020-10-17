@@ -600,5 +600,7 @@ step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forw
 > A <- paste("a", "b", "c", sep="-")
 > paste(A, c("e", "f"))
 > paste(A, 10, sep="")
+# 문자열 추출
+> substr("Bigdataanalysis",1,4) -> Bigd
 </code>
 </pre>
