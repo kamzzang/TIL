@@ -602,5 +602,13 @@ step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forw
 > paste(A, 10, sep="")
 # 문자열 추출
 > substr("Bigdataanalysis",1,4) -> Bigd
+# 기초 통계
+> mean(변수) # 평균
+> sum(변수) # 합계
+> median(변수) # 중앙값
+> sd(변수) # 표준편차
+> var(변수) # 분산
+> cov(변수1, 변수2) # 공분산
+> cor(변수1, 변수2) # 상관계수
 </code>
 </pre>
