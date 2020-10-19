@@ -610,5 +610,8 @@ step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forw
 > var(변수) # 분산
 > cov(변수1, 변수2) # 공분산
 > cor(변수1, 변수2) # 상관계수
+# 파일 읽기
+> read.table("파일이름", sep='구분자')
+> read.csv("파일이름", header=T)
 </code>
 </pre>
