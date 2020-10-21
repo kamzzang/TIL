@@ -615,3 +615,18 @@ step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forw
 > read.csv("파일이름", header=T)
 </code>
 </pre>
+
+
+## 2020.10.21
+### R
+<pre>
+<code>
+# 문자열 길이
+> nchar("문자열")
+# 문자열 연결
+> paste("단어1", "단어2", sep='-')
+> paste("the pi is approximately", pi)
+# 하위문자열 추출
+> substr("statistics", 1, 4)
+</code>
+</pre>
