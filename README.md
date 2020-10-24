@@ -628,5 +628,13 @@ step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forw
 > paste("the pi is approximately", pi)
 # 하위문자열 추출
 > substr("statistics", 1, 4)
+# 날짜 조회
+> format(Sys.Data(), '%a') # 요일조회
+> format(Sys.Data(), '%b') # 축약된 월이름조회
+> format(Sys.Data(), '%B') # 전체 월이름조회
+> format(Sys.Data(), '%d') # 두자리 숫자의 일조회
+> format(Sys.Data(), '%m') # 두자리 숫자의 월조회
+> format(Sys.Data(), '%y') # 두자리 숫자의 연도조회
+> format(Sys.Data(), '%Y') # 네자리 숫자의 연도조회
 </code>
 </pre>
