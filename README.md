@@ -636,5 +636,10 @@ step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forw
 > format(Sys.Data(), '%m') # 두자리 숫자의 월조회
 > format(Sys.Data(), '%y') # 두자리 숫자의 연도조회
 > format(Sys.Data(), '%Y') # 네자리 숫자의 연도조회
+# 날짜 추출
+> d <- as.Date("2014-12-25")
+> start <- as.Date("2014-12-01")
+> end <- as.Date("2014-12-25")
+> seq(from=start, to=end, by=1)
 </code>
 </pre>
