@@ -643,3 +643,19 @@ step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forw
 > seq(from=start, to=end, by=1)
 </code>
 </pre>
+
+
+## 2020.10.26
+### R
+<pre>
+<code>
+# 상관분석
+# 분산
+> var(x, y=NULL, na.rm=FALSE)
+# 공분산
+> cov(x, y=NULL, use='everything', method=c('pearson', 'kendall', 'spearman'))
+# 상관관계
+> cor(x, y=NULL, use='everything', method=c('pearson', 'kendall', 'spearman'))
+> rcorr(matrix(data명), type=c('pearson', 'kendall', 'spearman'))
+</code>
+</pre>
