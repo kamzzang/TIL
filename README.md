@@ -659,3 +659,19 @@ step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forw
 > rcorr(matrix(data명), type=c('pearson', 'kendall', 'spearman'))
 </code>
 </pre>
+
+## 2020.10.28
+### R
+<pre>
+<code>
+# R 기초 문제
+# 1
+> x <- 1:100
+> sum(x>50)
+# 2
+> x <- c(1,2,3,NA)
+> mean(x)
+# 3
+> s <- c("Monday", "Tuesday", "Wednesday")
+> substr(s, 1, 2)
+</pre>
