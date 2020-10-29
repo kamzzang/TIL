@@ -674,4 +674,9 @@ step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forw
 # 3
 > s <- c("Monday", "Tuesday", "Wednesday")
 > substr(s, 1, 2)
+# 4
+> c(2,4,6,8) + c(1,3,5,7,9)
+# 5
+> set.seed(1000)
+> sample(1:1000, 50)
 </pre>
