@@ -679,4 +679,10 @@ step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forw
 # 5
 > set.seed(1000)
 > sample(1:1000, 50)
+# SQL 기초 문제
+# 1
+SELECT NAME, GENDER, SALARY
+FROM CUSTOMERS
+WHERE AGE (   ) 20 AND 30
+</code>
 </pre>
