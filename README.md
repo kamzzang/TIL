@@ -679,6 +679,15 @@ step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forw
 # 5
 > set.seed(1000)
 > sample(1:1000, 50)
+# 6
+> x<-c(1:4)
+> y<-c("apple","banana","orange")
+> xy<-x(x,y)
+## A. xy는 문자형 벡터
+## B. xy의 길이는 7
+## C. xy[1] + xy[2]의 결과는 3
+## D. xy[5:7]은 y와 동일
+
 # SQL 기초 문제
 # 1
 SELECT NAME, GENDER, SALARY
