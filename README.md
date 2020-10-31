@@ -668,18 +668,23 @@ step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forw
 # 1
 > x <- 1:100
 > sum(x>50)
+
 # 2
 > x <- c(1,2,3,NA)
 > mean(x)
+
 # 3
 > s <- c("Monday", "Tuesday", "Wednesday")
 > substr(s, 1, 2)
+
 # 4
 > c(2,4,6,8) + c(1,3,5,7,9)
+
 # 5
 > set.seed(1000)
 > sample(1:1000, 50)
-# 6
+
+# 6 잘못된 것 찾기
 > x<-c(1:4)
 > y<-c("apple","banana","orange")
 > xy<-x(x,y)
@@ -687,6 +692,15 @@ step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forw
 ## B. xy의 길이는 7
 ## C. xy[1] + xy[2]의 결과는 3
 ## D. xy[5:7]은 y와 동일
+
+# 7 다른 결과 찾기
+> A <- cbind(c(1,2,3), c(4,5,6), c(7,8,9))
+> colnames(A) <- c("A","B","C")
+> rownames(A) <- c("r1","r2","r3")
+## A[,"A"}
+## A[-c(2,3),]
+## A[,1]
+## A[, -(2:3)]
 
 # SQL 기초 문제
 # 1
