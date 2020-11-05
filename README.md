@@ -712,5 +712,14 @@ WHERE AGE (   ) 20 AND 30
 select customer_name, 고객명, e_customer_name, 고객 영문명
 from customer
 where e_customer_name like '_A%';
+
+# 3 xy에 대한 설명으로 부적절한 것은?
+> x <- c(1:5)
+> y <- seq(10,50,10)
+> xy <- rbind(x,y)
+- 1. 2x5 행렬이다.
+- 2. xy[1,]은 x와 동일하다.
+- 3. xy[,1]은 y와 동일하다.
+- 4. Matrix 타입의 개체이다.
 </code>
 </pre>
