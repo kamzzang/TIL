@@ -703,17 +703,17 @@ step(lm(y~1, data=df), scope=list(lower=~1, upper=~x1+x2+x3+x4), direction="forw
 ## A[, -(2:3)]
 
 # SQL 기초 문제
-# 1
+# 1. ( )는?
 SELECT NAME, GENDER, SALARY
 FROM CUSTOMERS
 WHERE AGE (   ) 20 AND 30
 
-# 2
+# 2. 해당 SQL문 분석
 select customer_name, 고객명, e_customer_name, 고객 영문명
 from customer
 where e_customer_name like '_A%';
 
-# 3 xy에 대한 설명으로 부적절한 것은?
+# 3. xy에 대한 설명으로 부적절한 것은?
 > x <- c(1:5)
 > y <- seq(10,50,10)
 > xy <- rbind(x,y)
