@@ -786,3 +786,55 @@ for r in range(4,7):
 wb.save(fileName)
 </code>
 </pre>
+
+#### 3. 값 출력
+<pre>
+<code> 
+from openpyxl import Workbook
+ 
+# 파일명
+fileName = 'TEST.xlsx'
+ 
+# 워크북 생성
+wb = Workbook()
+ 
+# 워크북 활성화
+ws = wb.active
+ 
+# 첫번째 입력방법
+ws['A1'] = 1
+ 
+# 두번째 입력방법
+ws.cell(2,1,'B') # ws.cell(row=2, column=1, value=2)
+ 
+# 세번째 입력방법
+ws.append([2,'',4])
+ 
+# 네번째 입력방법
+for rng in ws['E1':'F3']:
+    for cell in rng:
+        cell.value = 'Hello'
+ 
+# 다섯번째 입력방법
+for r in range(4,7):
+    ws.cell(r,1,'World') # [A4:A6]
+ 
+# 첫번째 출력방법
+print(ws['A1'])
+ 
+# 두번째 출력방법
+print(ws.cell(2,1).value)
+ 
+# 세번째 출력방법
+for rng in ws['E1':'F3']:
+    for cell in rng:
+        print(cell.value)
+ 
+# 네번째 출력방법
+for r in range(4,7):
+    print(ws.cell(r,1).value) # [A4:A6]
+ 
+# 저장
+wb.save(fileName)
+</code>
+</pre>
