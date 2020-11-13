@@ -729,3 +729,22 @@ where e_customer_name like '_A%';
 - 4. Matrix 타입의 개체이다.
 </code>
 </pre>
+
+
+## 2020.11.13
+### Python openpyxl
+<pre>
+<code>
+# 1. 엑셀 파일 생성
+from openpyxl import Workbook
+ 
+# 파일명
+fileName = 'TEST.xlsx'
+ 
+# 워크북 생성
+wb = Workbook()
+ 
+# 저장
+wb.save(fileName)
+</code>
+</pre>
