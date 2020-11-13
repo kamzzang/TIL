@@ -733,9 +733,26 @@ where e_customer_name like '_A%';
 
 ## 2020.11.13
 ### Python openpyxl
+
+#### 1. 엑셀 파일 생성
 <pre>
-<code>
-# 1. 엑셀 파일 생성
+<code> 
+from openpyxl import Workbook
+
+# 파일명
+fileName = 'TEST.xlsx'
+ 
+# 워크북 생성
+wb = Workbook()
+ 
+# 저장
+wb.save(fileName)
+</code>
+</pre>
+
+#### 2. 값 입력
+<pre>
+<code> 
 from openpyxl import Workbook
  
 # 파일명
@@ -743,6 +760,27 @@ fileName = 'TEST.xlsx'
  
 # 워크북 생성
 wb = Workbook()
+ 
+# 워크북 활성화
+ws = wb.active
+ 
+# 첫번째 입력방법
+ws['A1'] = 1
+ 
+# 두번째 입력방법
+ws.cell(2,1,'B') # ws.cell(row=2, column=1, value=2)
+ 
+# 세번째 입력방법
+ws.append([2,'',4])
+ 
+# 네번째 입력방법
+for rng in ws['E1':'F3']:
+    for cell in rng:
+        cell.value = 'Hello'
+ 
+# 다섯번째 입력방법
+for r in range(4,7):
+    ws.cell(r,1,'World') # [A4:A6]
  
 # 저장
 wb.save(fileName)
