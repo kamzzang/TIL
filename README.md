@@ -838,3 +838,28 @@ for r in range(4,7):
 wb.save(fileName)
 </code>
 </pre>
+
+#### 4. 함수 입력
+<pre>
+<code> 
+from openpyxl import Workbook
+ 
+# 파일명
+fileName = 'TEST.xlsx'
+ 
+# 워크북 생성
+wb = Workbook()
+ 
+# 워크북 활성화
+ws = wb.active
+ 
+ws['A1'] = 10
+ws['A2'] = 20
+ws['A3'] = 30
+ws['A4'] = 40
+ws['A5'] = '=SUM(A1:A4)' # 합계 함수
+ 
+# 저장
+wb.save(fileName)
+</code>
+</pre>
