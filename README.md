@@ -750,6 +750,7 @@ wb.save(fileName)
 </code>
 </pre>
 
+
 #### 2. 값 입력
 <pre>
 <code> 
@@ -786,6 +787,7 @@ for r in range(4,7):
 wb.save(fileName)
 </code>
 </pre>
+
 
 #### 3. 값 출력
 <pre>
@@ -839,6 +841,7 @@ wb.save(fileName)
 </code>
 </pre>
 
+
 #### 4. 함수 입력
 <pre>
 <code> 
@@ -858,6 +861,54 @@ ws['A2'] = 20
 ws['A3'] = 30
 ws['A4'] = 40
 ws['A5'] = '=SUM(A1:A4)' # 합계 함수
+ 
+# 저장
+wb.save(fileName)
+</code>
+</pre>
+
+
+#### 5. 셀 서식
+<pre>
+<code> 
+from openpyxl import Workbook
+ 
+# 파일명
+fileName = 'TEST.xlsx'
+ 
+# 워크북 생성
+wb = Workbook()
+ 
+# 워크북 활성화
+ws = wb.active
+ 
+# A1 입력 + 형식변경
+ws['A1'] = 1000
+ws['A1'].number_format = '#,##0'
+ 
+# A2 입력 + 형식변경
+ws.cell(2,1,2000).number_format = '#,##0'
+ 
+# B1, B2 입력 + B열 형식변경
+ws['B1'] = 3000
+ws['B2'] = 4000
+for rng in ws['B:B']:
+    rng.number_format = '#,##0'
+ 
+# C1:D3 입력 + 형식변경
+for rng in ws['C1':'D3']:
+    for cell in rng:
+        cell.value = 5000
+        cell.number_format = '#,##0'
+ 
+# E1, E2, E3 입력 + 형식변경
+ws['E1'] = -250
+ws['E2'] = 250
+ws['E3'] = -300
+ws['E4'] = 0
+for rng in ws['E1':'E4']:
+    for cell in rng:
+        cell.number_format = '[RED]#,##0;[BLUE]-#,##0;"-"' # 양수면 빨강 음수면 파랑 0이면 -
  
 # 저장
 wb.save(fileName)
