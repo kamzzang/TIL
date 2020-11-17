@@ -914,3 +914,36 @@ for rng in ws['E1':'E4']:
 wb.save(fileName)
 </code>
 </pre>
+
+
+#### 6. 셀 병합
+<pre>
+<code> 
+from openpyxl import Workbook
+from openpyxl.styles import Alignment
+ 
+# 파일명
+fileName = 'TEST.xlsx'
+ 
+# 워크북 생성
+wb = Workbook()
+ 
+# 워크북 활성화
+ws = wb.active
+ 
+# A1:C1 병합
+ws.merge_cells('A1:C1')
+ 
+# 가운데맞춤
+ws['A1'].alignment = Alignment('center', 'center') # Alignment(horizontal='center', vertical='center') 
+ 
+# A1 입력
+ws['A1'] = 'Hello World !'
+ 
+# A1:C1 병합 해제
+# ws.unmerge_cells('A1:C1')
+ 
+# 저장
+wb.save(fileName)
+</code>
+</pre>
