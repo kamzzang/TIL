@@ -730,10 +730,18 @@ where e_customer_name like '_A%';
 </code>
 </pre>
 
+### R reshape
+# melt
+melt(MYDATA, id=c("no", "day"))
+
+# cast
+cast(MD, no+variable~day)
+cast(MD, no~variable, mean)
+cast(MD, no-variable+day)
+
 
 ## 2020.11.13
 ### Python openpyxl
-
 #### 1. 엑셀 파일 생성
 <pre>
 <code> 
