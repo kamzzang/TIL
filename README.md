@@ -955,3 +955,49 @@ ws['A1'] = 'Hello World !'
 wb.save(fileName)
 </code>
 </pre>
+
+
+#### 7. 마지막 행, 열 번호
+<pre>
+<code> 
+from openpyxl import Workbook
+ 
+# 파일명
+fileName = 'TEST.xlsx'
+ 
+# 워크북 생성
+wb = Workbook()
+ 
+# 워크북 활성화
+ws = wb.active
+ 
+# 마지막 행 구하기
+print('입력 전: ' + str(ws.max_row))
+ 
+# [A1:A10] 입력
+for rng in ws['A1:A10']:
+    for cell in rng:
+        cell.value = 'Excel'
+ 
+# 마지막 행 구하기
+print('입력 후: ' + str(ws.max_row))
+ 
+# 마지막 열 구하기
+print('입력 전: ' + str(ws.max_column))
+ 
+# [B1:G1] 입력
+for rng in ws['B1:G1']:
+    for cell in rng:
+        cell.value = 'Python'
+ 
+# 마지막 행 구하기
+print('입력 후: ' + str(ws.max_column))
+ 
+# 입력 된 열 구하기
+for cell in ws['1:1'].__iter__():
+    print(cell.value)
+ 
+# 저장
+wb.save(fileName)
+</code>
+</pre>
