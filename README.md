@@ -1001,3 +1001,75 @@ for cell in ws['1:1'].__iter__():
 wb.save(fileName)
 </code>
 </pre>
+
+
+#### 8. 테두리
+<pre>
+<code> 
+from openpyxl.styles import Border, Side
+from openpyxl import Workbook, styles
+ 
+# 파일명
+ 
+fileName = 'TEST.xlsx'
+ 
+# 워크북 생성
+wb = Workbook()
+ 
+# 워크북 활성화
+ws = wb.active
+ 
+# B2 입력
+ws['B2'] = 'Hello'
+# 왼쪽 테두리
+ws['B2'].border = Border(left=Side(style='thin'))
+# B3 입력
+ws['B4'] = 'Excel'
+# 왼쪽 테두리
+ws['B4'].border = Border(Side('thin'))
+ 
+ 
+ 
+# D2 입력
+ws['D2'] = 'Hello'
+# 오른쪽 테두리
+ws['D2'].border = Border(right=Side(style='thin'))
+# D4 입력
+ws['D4'] = 'Excel'
+# 오른쪽 테두리
+ws['D4'].border = Border(None, Side('thin'))
+ 
+ 
+ 
+# F2 입력
+ws['F2'] = 'python'
+# 모든 테두리
+ws['F2'].border = Border(left=Side(style='thin'),right=Side(style='thin'),top=Side(style='thin'),bottom=Side(style='thin'))
+# F4 입력
+ws['F4'] = 'python'
+# 모든 테두리
+ws['F4'].border = Border(Side('thin'),Side('thin'),Side('thin'),Side('thin'))
+ 
+ 
+ 
+# 사용자 스타일
+THIN_BORDER = Border(Side('thin'),Side('thin'),Side('thin'),Side('thin'))
+# H2 입력
+ws['H2'] = 'Style'
+# 모든 테두리
+ws['H2'].border = THIN_BORDER
+# H4 입력
+ws['H4'] = 'Style'
+# 모든 테두리
+ws['H4'].border = THIN_BORDER
+ 
+# 범위 테두리 설정
+for rng in ws['J2:K10']:
+    for cell in rng:
+        cell.value = 'All' # [J2:K10] = 'All'
+        cell.border = THIN_BORDER # [J2:K10] 모든테두리 설정
+ 
+# 저장
+wb.save(fileName)
+</code>
+</pre>
