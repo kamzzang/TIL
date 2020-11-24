@@ -1028,8 +1028,6 @@ ws['B4'] = 'Excel'
 # 왼쪽 테두리
 ws['B4'].border = Border(Side('thin'))
  
- 
- 
 # D2 입력
 ws['D2'] = 'Hello'
 # 오른쪽 테두리
@@ -1039,8 +1037,6 @@ ws['D4'] = 'Excel'
 # 오른쪽 테두리
 ws['D4'].border = Border(None, Side('thin'))
  
- 
- 
 # F2 입력
 ws['F2'] = 'python'
 # 모든 테두리
@@ -1049,8 +1045,6 @@ ws['F2'].border = Border(left=Side(style='thin'),right=Side(style='thin'),top=Si
 ws['F4'] = 'python'
 # 모든 테두리
 ws['F4'].border = Border(Side('thin'),Side('thin'),Side('thin'),Side('thin'))
- 
- 
  
 # 사용자 스타일
 THIN_BORDER = Border(Side('thin'),Side('thin'),Side('thin'),Side('thin'))
@@ -1068,6 +1062,48 @@ for rng in ws['J2:K10']:
     for cell in rng:
         cell.value = 'All' # [J2:K10] = 'All'
         cell.border = THIN_BORDER # [J2:K10] 모든테두리 설정
+ 
+# 저장
+wb.save(fileName)
+</code>
+</pre>
+
+
+#### 9. 시트
+<pre>
+<code> 
+from openpyxl.styles import Border, Side
+from openpyxl import Workbook, styles
+ 
+# 파일명
+fileName = 'TEST.xlsx'
+ 
+# 워크북 생성
+wb = Workbook()
+ 
+# 시트1 생성
+ws_1 = wb.create_sheet()
+ 
+# 시트2 생성
+ws_2 = wb.create_sheet()
+# 시트2 시트명 변경
+ws_2.title = '시트2'
+ 
+# 시트3 생성 (시트명 정의)
+ws_3 = wb.create_sheet('시트3')
+ 
+# 시트명 출력
+for sheetName in wb.sheetnames:
+    print(sheetName)
+print()
+ 
+# 모든 워크시트 A1 입력
+for wss in wb.worksheets:
+    wss['A1'] = 'python'
+ 
+# 특정 워크시트 A2 입력
+ws = wb.get_sheet_by_name('시트3')
+ws['A2'] = 'hello'
  
 # 저장
 wb.save(fileName)
