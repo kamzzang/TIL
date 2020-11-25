@@ -1086,6 +1086,7 @@ ws_1 = wb.create_sheet()
  
 # 시트2 생성
 ws_2 = wb.create_sheet()
+
 # 시트2 시트명 변경
 ws_2.title = '시트2'
  
@@ -1095,7 +1096,6 @@ ws_3 = wb.create_sheet('시트3')
 # 시트명 출력
 for sheetName in wb.sheetnames:
     print(sheetName)
-print()
  
 # 모든 워크시트 A1 입력
 for wss in wb.worksheets:
