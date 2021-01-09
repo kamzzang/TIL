@@ -1159,3 +1159,14 @@ if __name__ == '__main__':
     main()
 </code>
 </pre>
+
+
+## 2021.01.10
+### Python 가상환경 Batch 파일 실행
+<pre>
+<code>
+call conda activate [env_name] 
+call cd [path] 
+call python [file_name.py]
+</code>
+</pre>
