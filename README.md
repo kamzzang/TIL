@@ -1170,3 +1170,14 @@ call cd [path]
 call python [file_name.py]
 </code>
 </pre>
+
+
+## 2021.01.13
+### Pandas DataFrame 그림파일로 변환
+<pre>
+<code>
+import dataframe_image as dfi
+
+dfi.export(df, 'result.png')
+</code>
+</pre>
