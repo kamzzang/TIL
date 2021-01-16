@@ -1181,3 +1181,21 @@ import dataframe_image as dfi
 dfi.export(df, 'result.png')
 </code>
 </pre>
+
+
+## 2021.01.16
+### R
+<pre>
+<code>
+# 차함수
+> x <- c(1,2,4,5,7,9,10)
+> y <- c(1,2,3,4,5,8,10)
+> z <- setdiff(x, y)
+7 9
+> z <- setdiff(y, x)
+3 8
+# 교집합
+> z <- intersect(x, y)
+1 2 4 5 10
+</code>
+</pre>
