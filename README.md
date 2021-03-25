@@ -1199,3 +1199,29 @@ dfi.export(df, 'result.png')
 1 2 4 5 10
 </code>
 </pre>
+
+
+## 2021.03.25
+### 파이썬 배포를 위한 cython을 활용
+ 1. 다른 py에서 import해서 사용할 수 있도록 모듈화 하여 py 작성    
+ 2. 확장자를 pyx로 변경    
+ 3. setup.py 생성    
+<pre>
+<code>
+    from distutils.core import setup
+    from Cython.Build import cythonize
+    setup(ext_modules = cythonize('pyx파일명'))    
+</code>
+</pre>
+ 4. cmd창에서 python setup.py build_ext --inplace    
+ 5. 실행용 py 생성하여 import 파일명    
+    <GUI 버젼일 경우 예시>    
+<pre>
+<code>
+    import PowerControl as pc
+    app = pc.QApplication(pc.sys.argv)
+    myWindow = pc.MyWindow()
+    app.exec()
+</code>
+</pre>
+ 6. 배포 시 실행용 py, pyd(pyd파일명에 py37~~ 삭제 가능), ui파일(GUI버젼일 경우)
